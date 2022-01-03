@@ -7,9 +7,11 @@
 int     main()
 {
     int check;
-    int targetPID = 1277;
-    
-    check = kill(targetPID, 0) // targetPID로 Null signal 보낸다
+    int targetPID = 0;
+
+    printf("Which process do you want to check permission? : ");
+    scanf(" %d", &targetPID);
+    check = kill(targetPID, 0); // targetPID로 Null signal 보낸다
     if (check) // 실패 : 권한 없음
         fprintf(stderr, "Lack of permission\n");
     else // check == 0 -> 성공 : 권한 있음
