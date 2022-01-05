@@ -126,4 +126,5 @@ int     main(int argc, char **argv)
     printf("argv[1] : %s\n", s);
     printf("result : %s\n", new);
     free(new);
+    return (0);
 }
