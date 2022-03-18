@@ -13,11 +13,10 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to listen on port 9000: %v", err)
 	}
-	) 
 
-	s := chat.Server{} // define a new server
+	s := chat.Server{} // define a new server (create new instance)
 
-	grpcServer := grpc.NewServer() // make grpc server
+	grpcServer := grpc.NewServer() // make grpc server (NewServer is auto-generated func in chat.pb.go)
 
 	chat.RegisterChatServiceServer(grpcServer, &s) // register chat service server to grpc Server
 	if err := grpcServer.Serve(lis); err != nil {

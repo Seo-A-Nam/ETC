@@ -1,4 +1,18 @@
 # gRPC practice (Go)
+create grpc server and client that serves chat service program
+
+- install grpc packages
+
+```
+go get -u google.golang.org/grpc
+```
+
+- compile chat.proto into chat directory
+
+```
+mkdir chat
+protoc --go_out=plugins=grpc:chat chat.proto
+```
 
 
 # reference

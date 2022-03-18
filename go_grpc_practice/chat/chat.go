@@ -8,7 +8,8 @@ import (
 type Server struct {
 }
  
-func (s *Server) SayHello(ctx context.Context, message *Message) (*Message, error) { // define rpc methods - returns message pointer or error
-	log.Printf("Recieved message body from client: %s", message.body)
+func (s *Server) SayHello(ctx context.Context, message *Message) (*Message,
+error) { // define rpc methods - returns message pointer or error
+	log.Printf("Recieved message body from client: %s", message.Body)
 	return &Message{Body: "Hello From the Server!"}, nil // if fail, return nil for error
 }
