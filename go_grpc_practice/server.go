@@ -4,9 +4,8 @@ package main
 import (
 	"log"
 	"net"
-	"github.com/golang/protobuf/proto"
-	"google.golang.org/gprc"
-	"github.com/tutorialedge/go-grpc-tutorial/chat"
+	"google.golang.org/grpc"
+	"github.com/Seo-A-Nam/Etc/go_grpc_practice/chat"
 )
 
 func main() {
@@ -14,8 +13,9 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to listen on port 9000: %v", err)
 	}
-	
-	s := chat.Server() // define a new server
+	) 
+
+	s := chat.Server{} // define a new server
 
 	grpcServer := grpc.NewServer() // make grpc server
 
