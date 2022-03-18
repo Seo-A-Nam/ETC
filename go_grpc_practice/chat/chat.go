@@ -6,7 +6,6 @@ import (
 )
 
 type Server struct {
-
 }
  
 func (s *Server) SayHello(ctx context.Context, message *Message) (*Message, error) { // define rpc methods - returns message pointer or error
