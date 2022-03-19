@@ -14,9 +14,17 @@ mkdir chat
 protoc --go_out=plugins=grpc:chat chat.proto
 ```
 
+- execute grpc server and client
+    - prepare 2 termial and type each command in each terminal.  
+```
+go run server.go
+go run client.go
+```
+
 
 # reference
 - youtbe tutorial
+
 https://www.youtube.com/watch?v=BdzYdN_Zd9Q
 
 ____
